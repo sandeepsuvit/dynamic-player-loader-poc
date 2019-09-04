@@ -67,6 +67,8 @@ export class PlayerComponent implements OnInit, OnDestroy {
     const compInstance = (this.componentRef.instance as BasePlayerComponent);
     // Pass data to the base
     compInstance.player = player;
+    // Used to removing the component from the dom
+    compInstance.parentCntRef = this.playerRenderer;
   }
 
 }

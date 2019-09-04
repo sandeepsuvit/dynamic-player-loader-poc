@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewContainerRef } from '@angular/core';
 import { IPlayer } from '../interfaces/_base/player.interface';
 
 @Component({
@@ -8,10 +8,21 @@ import { IPlayer } from '../interfaces/_base/player.interface';
 })
 export class BasePlayerComponent implements OnInit {
   player: IPlayer | any;
+  // Parent component reference
+  parentCntRef: ViewContainerRef | any;
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  /**
+   * Remove the component from the dom
+   *
+   * @memberof BasePlayerComponent
+   */
+  onRemove() {
+    this.parentCntRef.clear();
   }
 
 }

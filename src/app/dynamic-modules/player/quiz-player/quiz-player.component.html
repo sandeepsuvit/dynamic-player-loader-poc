@@ -1,5 +1,8 @@
 <div class="card">
     <div class="card-body">
+        <button type="button" class="close" (click)="onRemove()">
+            <span aria-hidden="true">&times;</span>
+        </button>
         <p>Type: {{player.type}}</p>
         {{player.data.title}}
     </div>
