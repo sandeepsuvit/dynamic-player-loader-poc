@@ -1,5 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
 body {
-  font-family: Sans-Serif;
+    font-family: Sans-Serif;
+}
+
+.card {
+    border: solid 1px #999;
+    border-radius: .2rem;
+    margin-bottom: .5rem;
+    &-body {
+        p {
+            margin-top: 0;
+        }
+        padding: 0.5rem 1rem;
+    }
 }

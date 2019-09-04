@@ -22,6 +22,11 @@ const manifests: DynamicComponentManifest[] = [
     componentId: 'dialog',
     path: 'dialog',
     loadChildren: () => import('./dynamic-modules/dialog/dialog.module').then(m => m.DialogModule)
+  },
+  {
+    componentId: 'player',
+    path: 'player',
+    loadChildren: () => import('./dynamic-modules/player/player.module').then(m => m.PlayerModule)
   }
 ];
 

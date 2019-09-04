@@ -1,9 +1,22 @@
-<h1>Lazy-Loading Components Without Routing</h1>
+<!-- <h1>Lazy-Loading Components Without Routing</h1>
 
 <p>Check out the "Network" tab in F12 DevTools.</p>
 
 <p>Then, click "Load!".</p>
 <button type="button" (click)="showDialog()">Show Dialog!</button>
-<button type="button" (click)="loadComponent()">Load!</button>
+<button type="button" (click)="loadComponent()">Load!</button> 
 
-<div #testOutlet></div>
+<div #testOutlet></div>-->
+
+<!-- <button type="button" (click)="loadPlayer(PLAYER_TYPE_REF.EBOOK)">Ebook player</button>
+<button type="button" (click)="loadPlayer(PLAYER_TYPE_REF.WORKSHEET)">Worksheet player</button>
+<button type="button" (click)="loadPlayer(PLAYER_TYPE_REF.QUIZ)">Quiz player</button> -->
+
+<ng-container *ngFor="let player of playlist">
+    <button type="button" (click)="loadPlayer(player)">{{player.data.title}}</button>
+</ng-container>
+
+<br /><br />
+
+<!-- This is the place where the player components would mount -->
+<div #playerOutlet></div>
